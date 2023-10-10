@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: dashed boarder;
+    font-family: 'popins', fantasy
+}
+body{
+    background: #66FCF1
+}
+.card{
+    text-align:center;
+    color: #fff;
+    max-width: 470px;
+    border-start-end-radius: 30px;
+    padding: 40px 35px;
+    width: 90%;
+    background: linear gradient (135 deg, FF00FF, DA70D6)
+    margin ; 100px auto 0;
+}
+.search{
+    width: 100px;
+    display: flex;
+    align-items: cenre;
+    justify-content: space-between;
+}
+.searchinput{
+border: 0;
+outline: 0;
+background: #ebfffc;
+color: #555;
+padding: 10px 25px;
+height: 60px;
+border-start-end-radius: 30px;
+flex: 1;
+margin-right: 16px;
+font-size: 10px;
+}
