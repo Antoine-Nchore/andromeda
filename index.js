@@ -18,17 +18,10 @@ function getWeather(city = "Amsterdam") {
   fetch(url, requestOptions)
       .then(response => response.json())
       .then(data => {
-          // Extract relevant information from the data
-          const temperature = data.main.temp;
-          const cityName = data.name;
-          const humidity = data.main.humidity;
-          const windSpeed = data.wind.speed;
-
-          // Update your HTML elements with the extracted data
-          document.querySelector('.temp').textContent = `${temperature}°C`;
-          document.querySelector('.city').textContent = cityName;
-          document.querySelector('.Humidity').textContent = `${humidity}%`;
-          document.querySelector('.Wind').textContent = `${windSpeed} km/hr`;
+        document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".temperature").innerHTML = `Temperature: ${data.main.temp}°C`;
+        document.querySelector(".humidity").innerHTML = `Humidity: ${data.main.humidity}%`;
+        document.querySelector(".description").innerHTML = `Weather: ${data.weather[0].description}`;
       })
       .catch(error => console.log('error', error));
 }
