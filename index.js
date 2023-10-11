@@ -1,29 +1,37 @@
-// Fetching data from a public API
-document.addEventListener('DOMContentLoaded', () =>{
-    getWeather();
-})
-function getWeather(city = 'Amsterdam'){
-    const myHeaders = new Headers();
-myHeaders.append("X-Api-Key", "i8/oOmZWiKWws6kFjI8lsg==fRITSduo7vzUa9Es");
-const requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
+document.addEventListener('DOMContentLoaded', () => {
+  getWeather();
+});
 
-fetch("https://api.api-ninjas.com/v1/weather?city=London", requestOptions)
-  .then(response => response.json())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+function getWeather(city = "Amsterdam") {
+  const apiKey = "i8/oOmZWiKWws6kFjI8lsg==fRITSduo7vzUa9Es";
+  const url = `https://api.api-ninjas.com/v1/weather?city=${city}`;
+
+  const myHeaders = new Headers();
+  myHeaders.append("X-Api-Key", "i8/oOmZWiKWws6kFjI8lsg==fRITSduo7vzUa9Es");
+
+  const requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow',
+  };
+
+  fetch(url, requestOptions)
+      .then(response => response.json())
+      .then(data => {
+          // Extract relevant information from the data
+          const temperature = data.main.temp;
+          const cityName = data.name;
+          const humidity = data.main.humidity;
+          const windSpeed = data.wind.speed;
+
+          // Update your HTML elements with the extracted data
+          document.querySelector('.temp').textContent = `${temperature}°C`;
+          document.querySelector('.city').textContent = cityName;
+          document.querySelector('.Humidity').textContent = `${humidity}%`;
+          document.querySelector('.Wind').textContent = `${windSpeed} km/hr`;
+      })
+      .catch(error => console.log('error', error));
 }
-//Accessind elements with the DOM
 
-const ourCard = document.querySelector('.card');
-const searchBtn = document.querySelector('.search');
-const Onclick = document.getElementsByTagName('button');
-const weatherImg = document.querySelector("weather-icon");
-const temperature = document.querySelector("temp");
-const location = document.querySelector("city");
-const waterVapor = document.querySelector("humidity");
-const windSpeed = document.querySelector("wind")
+
 
