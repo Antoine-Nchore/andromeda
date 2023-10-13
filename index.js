@@ -27,8 +27,6 @@ function getWeather(city) {
       })
       .catch(error => console.log('error', error));
       
-      //const temperature = document.querySelector(".temp");
-      //temp.addEventListener('click')
 
 }
 const searchButton = document.querySelector(".SearchHere");
@@ -37,6 +35,15 @@ const searchButton = document.querySelector(".SearchHere");
         const input = document.getElementById('inputfield');
         getWeather(input.value);
       });
+      const leaveComment = document.querySelector(".CommentHere");
+      console.log(leaveComment);
+      searchButton.addEventListener('click',(e) => {
+        const input = document.getElementById('inputcomment');
+        getWeather(input.value);
+      });     
+
+
+
 
   
 
