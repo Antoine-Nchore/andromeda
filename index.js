@@ -19,7 +19,7 @@ function getWeather(city) {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        document.querySelector(".city").textContent = city;
+       document.querySelector(".city").textContent = city;
         document.querySelector(".temp").textContent = `Temperature: ${data.temp}°C`;
         document.querySelector(".Humidity").textContent = `Humidity: ${data.humidity}%`;
         document.querySelector(".Wind").textContent = `Wind speed: ${data.wind_speed} km/hr`;
@@ -37,10 +37,12 @@ const searchButton = document.querySelector(".SearchHere");
       });
       const leaveComment = document.querySelector(".CommentHere");
       console.log(leaveComment);
-      searchButton.addEventListener('click',(e) => {
+      leaveComment.addEventListener('click',(e) => {
         const input = document.getElementById('inputcomment');
-        getWeather(input.value);
-      });     
+        alert(input.value);
+      });
+      
+      
 
 
 
