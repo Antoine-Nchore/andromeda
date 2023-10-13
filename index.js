@@ -26,14 +26,18 @@ function getWeather(city) {
       
       })
       .catch(error => console.log('error', error));
+      
+      //const temperature = document.querySelector(".temp");
+      //temp.addEventListener('click')
+
 }
-//Event Listners to the file
-  const searchButton = document.querySelector(".SearchHere");
-  searchButton.addEventListener('click',() => {
-    const inputField = document.querySelector("#inputfield");
-  getWeather(inputField.value);
-    //console.log(data);
-  } )
+const searchButton = document.querySelector(".SearchHere");
+      console.log(searchButton);
+      searchButton.addEventListener('click',(e) => {
+        const input = document.getElementById('inputfield');
+        getWeather(input.value);
+      });
+
   
 
 
