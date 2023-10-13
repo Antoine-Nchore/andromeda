@@ -35,12 +35,28 @@ const searchButton = document.querySelector(".SearchHere");
         const input = document.getElementById('inputfield');
         getWeather(input.value);
       });
+      //Adding  another event
       const leaveComment = document.querySelector(".CommentHere");
       console.log(leaveComment);
       leaveComment.addEventListener('click',(e) => {
         const input = document.getElementById('inputcomment');
         alert(input.value);
       });
+      
+      //Adding
+      const button = document.querySelector(".About_Us");
+      function aboutWeather(info) {
+        return function() {
+          'We are focused to give you daily weather updates'
+          alert("The weather app also provides atmospheric pressure, weather conditions, visibility distance, relative humidity, precipitation in different unites, dew point, wind speed and direction, in addition to ten days in future and hourly weather forecast.");
+          console.log(info);
+        };
+      }
+      const info = 'This is some real data about daily weather updates';
+      button.addEventListener("click", aboutWeather(info));
+
+
+
       
       
 
