@@ -4,12 +4,62 @@ body, h1, h2, p, input, button {
 }
 
 body {
-    background-image: url('https://www.shutterstock.com/shutterstock/videos/1088045871/thumb/1.jpg?ip=x480');
+    background-image: url('https://kg2.com.au/wp-content/uploads/2023/02/thunderstorm-1768742_1280-1024x683.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         height: 100vh;
         background-position: center;
+        transition:0;
+        animation: moveBackground 30s linear infinite;
+}
+@keyframes moveBackground{
+    0%
+    {
+        background-image: url('https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/23613146140_6edfea579f_k.jpg?m0oNCnmjJAswk0CJrWZ.iW.ge6XbrfR1&itok=YBQjaq77'); 
+    }
+    20%
+    {
+        background-image: url('https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079_1280.jpg');
+    }
+    40%
+    {
+        background-image: url('https://www.masaimara.travel/images/nairobi-national-park-kenya.jpg');
+    }
+    60%
+    {
+        background-image: url('https://i0.wp.com/kuwa-huru.com/wp-content/uploads/2021/09/daressalaam.jpg');   
+
+    }
+    80%
+    {
+        background-image: url('https://afar.brightspotcdn.com/dims4/default/9e49d39/2147483647/strip/true/crop/800x400+0+50/resize/1440x720!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2F52%2F27%2F75e5a780203adc8e148104996ede%2Foriginal-925782c19d188263e00bf14985b940b2.jpg');
+    }
+    100%
+    {
+        background-image: url('https://www.travelandleisure.com/thmb/Ob_Nwm7hl66sqsHuQghB9ERCEjs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/dubai-DUBAITG0721-04b6fdc668e649adb5368b3db401651c.jpg');
+    }
+    120%
+    {
+        background-image: url('https://res.cloudinary.com/enchanting/q_100,f_auto,c_lfill,w_400,h_300/hj-web/2020/10/085017-Great-Wall-of-China-Pixabay-1113709.jpg');
+    }
+    140%
+    {
+        background-image: url('https://fullsuitcase.com/wp-content/uploads/2022/05/One-day-in-New-York-USA-NYC-day-trip-itinerary.jpg.webp');
+    }
+    160%
+    {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Cidade_Maravilhosa.jpg/1200px-Cidade_Maravilhosa.jpg');
+    }
+    180%
+    {
+        background-image: url('https://images.immediate.co.uk/production/volatile/sites/7/2019/07/33-GettyImages-154260931-216706f.jpg?resize=768,574');
+    }
+    200%
+    {
+        background-image: url('https://www.kempinski.com/var/site/storage/images/6/6/3/5/1555366-1-eng-GB/c2d65193b251-75378391_4K.jpg');
+    }
+
 }
 
 .card {
@@ -87,5 +137,5 @@ button {
     .card {
         width: 90%;
     }
-}
 
+}
